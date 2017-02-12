@@ -253,9 +253,9 @@ if (project.hasProperty('nodeInstall')) {
         }
     }
     npmInstall.dependsOn installLocalNpm
+    npmInstall.dependsOn(yarn)
 }
 
-npmInstall.dependsOn(yarn_install)
 
 compileJava.dependsOn processResources
 processResources.dependsOn cleanResources,bootBuildInfo
