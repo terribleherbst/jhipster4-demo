@@ -1,0 +1,12 @@
+version: '2'
+services:
+    hippo4-postgresql:
+        container_name: hippo4-postgresql
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/hippo4/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=hippo4
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
