@@ -253,8 +253,8 @@ if (project.hasProperty('nodeInstall')) {
         }
     }
     npmInstall.dependsOn installLocalNpm
-    npmInstall.dependsOn npm_install_yarn
 }
+npmInstall.dependsOn npm_install_yarn
 
 compileJava.dependsOn processResources
 processResources.dependsOn cleanResources,bootBuildInfo
